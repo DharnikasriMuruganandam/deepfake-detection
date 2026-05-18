@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Select Detection</title>
+
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a href="/">Home</a>
+      <a href="/select">Select</a>
+    </div>
+
+    <div class="center-box">
+      <h1>Deepfake Detection</h1>
+
+      <p>Choose detection type</p>
+
+      <div style="margin-top: 40px">
+        <button
+          onclick="location.href = '/image'"
+          style="width: 220px; height: 60px; font-size: 18px; margin: 20px"
+        >
+          Image Detection
+        </button>
+
+        <button
+          onclick="location.href = '/video'"
+          style="width: 220px; height: 60px; font-size: 18px; margin: 20px"
+        >
+          Video Detection
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

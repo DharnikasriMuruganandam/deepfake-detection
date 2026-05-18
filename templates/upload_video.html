@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>Video Upload</title>
+
+    <link rel="stylesheet" href="/static/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="/static/script.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a href="/">Home</a>
+      <a href="/select">Select</a>
+      <a href="/image">Image</a>
+      <a href="/video">Video</a>
+    </div>
+
+    <h2 style="text-align: center">Upload Video</h2>
+
+    <div class="row">
+      <div class="left-box">
+        <h3>Select Video</h3>
+
+        <input
+          type="file"
+          id="videoFile"
+          accept="video/*"
+          onchange="previewVideo(event)"
+        />
+
+        <br /><br />
+
+        <video
+          id="videoPreview"
+          width="250"
+          controls
+          style="border-radius: 10px; border: 2px solid #ddd"
+        ></video>
+
+        <br /><br />
+        <label>
+          <b>Select Model:</b>
+        </label>
+
+        <br /><br />
+
+        <select
+          id="modelType"
+          style="padding: 10px; border-radius: 8px; width: 200px"
+        >
+          <option value="cnn">MobileNetV2 (CNN)</option>
+
+          <option value="xception">ResNet18</option>
+        </select>
+      </div>
+
+      <div class="right-box">
+        <h3 id="result"></h3>
+
+        <p id="confidence"></p>
+
+        <div class="chart-box">
+          <canvas id="chart"></canvas>
+        </div>
+
+        <br />
+
+        <button onclick="analyzeVideo()">Analyze</button>
+
+        <button onclick="goVideoResult()">See Result</button>
+      </div>
+    </div>
+  </body>
+</html>

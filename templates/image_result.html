@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Image Result</title>
+
+    <link rel="stylesheet" href="/static/style.css" />
+
+    <script src="/static/script.js"></script>
+  </head>
+<body onload="loadImageResult()">
+   
+    <div class="navbar">
+      <a href="/">Home</a>
+      <a href="/select">Select</a>
+      <a href="/image">Image</a>
+      <a href="/video">Video</a>
+    </div>
+
+    <div class="center-box">
+      <h2>Image Result</h2>
+
+      <p id="info"></p>
+
+      <p id="modelUsed"></p>
+
+      <div class="row">
+
+        <div class="left-box">
+          <h3>Original Image</h3>
+
+          <img
+            id="original"
+            width="250"
+            style="border-radius: 10px; border: 2px solid #ddd"
+          />
+        </div>
+
+      
+        <div class="left-box">
+          <h3>Heatmap</h3>
+
+          <img
+            id="heatmap"
+            width="250"
+            style="border-radius: 10px; border: 2px solid #ddd"
+          />
+
+          <br /><br />
+
+          <p id="reason"></p>
+        </div>
+      </div>
+
+      <br />
+
+  
+      <button onclick="goHome()">Exit</button>
+    </div>
+
+  
+    <script>
+      function goHome() {
+        let ok = confirm("Exit to Home Page?");
+
+        if (ok) {
+          window.location.href = "/";
+        }
+      }
+    </script>
+  </body>
+</html>
